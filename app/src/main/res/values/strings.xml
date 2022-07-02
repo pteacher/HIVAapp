@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">HIVA app</string>
+    <string name="cat_pick">ВЫБРАТЬ</string>
+    <string name="task_new">Новое</string>
+    <string name="task_in_process">В процессе</string>
+    <string name="task_done">Сделано</string>
+    <string name="task_canceled">Отказано</string>
+</resources>

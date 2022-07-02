@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="categories">
+        <item>rector</item>
+        <item>vicerector</item>
+        <item>ahc_prorector</item>
+        <item>hod</item>
+        <item>ahc</item>
+        <item>it</item>
+        <item>lib</item>
+        <item>cks</item>
+        <item>hr</item>
+        <item>accountant</item>
+        <item>science prorector</item>
+    </string-array>
+</resources>

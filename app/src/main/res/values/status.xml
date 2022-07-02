@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="status">
+        <item name="new">новое</item>
+        <item name="inp">в процессе</item>
+        <item name="done">сделано</item>
+        <item name="rej">отказано</item>
+    </string-array>
+</resources>
