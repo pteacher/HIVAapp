@@ -11,10 +11,13 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+import com.example.hivaapp.MainActivity;
 import com.example.hivaapp.R;
+import com.example.hivaapp.TasksActivity;
 import com.example.hivaapp.models.Task;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
+import com.google.firebase.database.DatabaseReference;
 
 public class TaskAdapter extends FirebaseRecyclerAdapter<Task, TaskAdapter.taskViewholder> {
     public TaskAdapter(
@@ -29,6 +32,12 @@ public class TaskAdapter extends FirebaseRecyclerAdapter<Task, TaskAdapter.taskV
 
         holder.date.setText(model.getDate());
         holder.suggestion_text.setText(model.getSuggestion_text());
+
+        if (!TasksActivity.categoryChoice.equals(model.getCategory()))
+        holder.layout.setVisibility(View.GONE);
+
+        Log.d("CAT-X", model.getCategory());
+
 
         int pos = 0;
         if (model.getStatus().equals("new")) {
@@ -52,10 +61,23 @@ public class TaskAdapter extends FirebaseRecyclerAdapter<Task, TaskAdapter.taskV
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(adapter);
         spinner.setSelection(pos);
+
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
-            public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
-                Log.d("CHECK","" + position);
+            public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int pos, long id) {
+                if (model.getUserAction()) {
+                    DatabaseReference ref = getRef(position);
+                    switch (pos) {
+                        case 0: model.setStatus("new"); break;
+                        case 1: model.setStatus("inprogress"); break;
+                        case 2: model.setStatus("done"); break;
+                        case 3: model.setStatus("rejected"); break;
+                    }
+                    ref.setValue(model);
+                } else {
+                    model.setUserAction(true);
+                }
+
             }
 
             @Override

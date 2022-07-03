@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="categories">
-        <item>rector</item>
-        <item>vicerector</item>
-        <item>ahc_prorector</item>
-        <item>hod</item>
-        <item>ahc</item>
-        <item>it</item>
-        <item>lib</item>
-        <item>cks</item>
-        <item>hr</item>
-        <item>accountant</item>
-        <item>science prorector</item>
+        <item>Ректор</item>
+        <item>Проректор по учебной работе</item>
+        <item>Проректор по административной работе</item>
+        <item>Заведующий кафедрой</item>
+        <item>Заведующий технический отдел</item>
+        <item>Директор IT</item>
+        <item>Директор библиотеки</item>
+        <item>Шеф-повар</item>
+        <item>Директор СКЦ</item>
+        <item>Заведующий отделом кадров</item>
+        <item>Заведующий бухгалтерией</item>
+        <item>Проректор по науке</item>
     </string-array>
 </resources>

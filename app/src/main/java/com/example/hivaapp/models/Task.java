@@ -6,6 +6,7 @@ public class Task {
     String date;
     String status;
     String suggestion_text;
+    private Boolean isUserAction = false;
 
     public Task() {
     }
@@ -48,5 +49,13 @@ public class Task {
 
     public void setSuggestion_text(String suggestion_text) {
         this.suggestion_text = suggestion_text;
+    }
+
+    public Boolean getUserAction() {
+        return isUserAction;
+    }
+
+    public void setUserAction(Boolean userAction) {
+        isUserAction = userAction;
     }
 }

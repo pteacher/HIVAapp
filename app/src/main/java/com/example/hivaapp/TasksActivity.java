@@ -22,32 +22,34 @@ public class TasksActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
     private TaskAdapter taskAdapter;
     private DatabaseReference mDatabase;
+    static public String categoryChoice;
+    private String[] categories = {"rector", "vicerector", "ahc_prorector", "hod", "ahc", "it", "lib", "chief", "cks", "hr", "accountant", "science prorector"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        if (savedInstanceState == null) {
+            Bundle extras = getIntent().getExtras();
+            if(extras == null) {
+                categoryChoice= null;
+            } else {
+                categoryChoice= categories[extras.getInt("key")];
+            }
+        } else {
+            categoryChoice = categories[(Integer) savedInstanceState.getSerializable("key")];
+        }
+
+        Log.d("CAT", categoryChoice);
+
         mDatabase = FirebaseDatabase.getInstance().getReference("suggestions");
 
-        Query onlyInProgress = FirebaseDatabase
+        Query onlyNew = FirebaseDatabase
                 .getInstance()
                 .getReference()
                 .child("suggestions")
                 .orderByChild("status")
-                .equalTo("inprogress");
+                .equalTo("new");
 
-        Query onlyDone = FirebaseDatabase
-                .getInstance()
-                .getReference()
-                .child("suggestions")
-                .orderByChild("status")
-                .equalTo("done");
-
-        Query onlyRejected = FirebaseDatabase
-                .getInstance()
-                .getReference()
-                .child("suggestions")
-                .orderByChild("status")
-                .equalTo("rejected");
 
         getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
         getSupportActionBar().setCustomView(R.layout.toolbar_layout);
@@ -58,7 +60,7 @@ public class TasksActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(
                 new LinearLayoutManager(this));
         FirebaseRecyclerOptions<Task> options = new FirebaseRecyclerOptions.Builder<Task>()
-                .setQuery(onlyInProgress, com.example.hivaapp.models.Task.class)
+                .setQuery(onlyNew, com.example.hivaapp.models.Task.class)
                 .build();
         taskAdapter = new TaskAdapter(options);
         recyclerView.setAdapter(taskAdapter);
@@ -134,5 +136,6 @@ public class TasksActivity extends AppCompatActivity {
                 .build();
 
         taskAdapter.updateOptions(options);
+
     }
 }
