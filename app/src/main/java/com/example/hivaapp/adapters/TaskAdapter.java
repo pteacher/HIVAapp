@@ -33,12 +33,6 @@ public class TaskAdapter extends FirebaseRecyclerAdapter<Task, TaskAdapter.taskV
         holder.date.setText(model.getDate());
         holder.suggestion_text.setText(model.getSuggestion_text());
 
-        if (!TasksActivity.categoryChoice.equals(model.getCategory()))
-        holder.layout.setVisibility(View.GONE);
-
-        Log.d("CAT-X", model.getCategory());
-
-
         int pos = 0;
         if (model.getStatus().equals("new")) {
             holder.layout.setBackgroundColor(Color.parseColor("#FFFFFF"));

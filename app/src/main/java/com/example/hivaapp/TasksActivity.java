@@ -47,6 +47,7 @@ public class TasksActivity extends AppCompatActivity {
                 .getInstance()
                 .getReference()
                 .child("suggestions")
+                .child(categoryChoice)
                 .orderByChild("status")
                 .equalTo("new");
 
@@ -83,6 +84,7 @@ public class TasksActivity extends AppCompatActivity {
                 .getInstance()
                 .getReference()
                 .child("suggestions")
+                .child(categoryChoice)
                 .orderByChild("status")
                 .equalTo("new");
 
@@ -98,6 +100,7 @@ public class TasksActivity extends AppCompatActivity {
                 .getInstance()
                 .getReference()
                 .child("suggestions")
+                .child(categoryChoice)
                 .orderByChild("status")
                 .equalTo("inprogress");
 
@@ -113,6 +116,7 @@ public class TasksActivity extends AppCompatActivity {
                 .getInstance()
                 .getReference()
                 .child("suggestions")
+                .child(categoryChoice)
                 .orderByChild("status")
                 .equalTo("done");
 
@@ -128,6 +132,7 @@ public class TasksActivity extends AppCompatActivity {
                 .getInstance()
                 .getReference()
                 .child("suggestions")
+                .child(categoryChoice)
                 .orderByChild("status")
                 .equalTo("rejected");
 
