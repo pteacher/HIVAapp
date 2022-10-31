@@ -5,7 +5,8 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="10dp"
+        android:layout_marginHorizontal="5dp"
+        android:layout_marginVertical="5dp"
         android:scrollbars="vertical"
         app:cardCornerRadius="10dp">
 
@@ -35,8 +36,10 @@
         <Spinner
                 android:layout_gravity="center"
                 android:id="@+id/status_spinner"
+                android:contentDescription="@string/card_for_task"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_margin="10dp"
                 />
 
     </LinearLayout>

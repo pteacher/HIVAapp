@@ -1,34 +1,34 @@
 {
   "project_info": {
-    "project_number": "885207572785",
-    "firebase_url": "https://hiva-alatoo-2022-default-rtdb.europe-west1.firebasedatabase.app",
-    "project_id": "hiva-alatoo-2022",
-    "storage_bucket": "hiva-alatoo-2022.appspot.com"
+    "project_number": "4113742468",
+    "firebase_url": "https://home-8566e.firebaseio.com",
+    "project_id": "home-8566e",
+    "storage_bucket": "home-8566e.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:885207572785:android:0d9b389b1b74e2d2705010",
+        "mobilesdk_app_id": "1:4113742468:android:f16cf3e60227053c1920d1",
         "android_client_info": {
-          "package_name": "com.example.hivaapp"
+          "package_name": "kg.alatoo.hivaapp"
         }
       },
       "oauth_client": [
         {
-          "client_id": "885207572785-gs1ra320r5hpsonmhbrshb2g5jt0uu7s.apps.googleusercontent.com",
+          "client_id": "4113742468-eit66s79gu3u6ovp9f015oflj98vgabe.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyAUN7H9EFGvHx5QIX6FPFknF9fs4b-Z7qM"
+          "current_key": "AIzaSyBAvY0Ys6Nw8KWHp4STVNfUyX2OKn0DNjM"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "885207572785-gs1ra320r5hpsonmhbrshb2g5jt0uu7s.apps.googleusercontent.com",
+              "client_id": "4113742468-eit66s79gu3u6ovp9f015oflj98vgabe.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

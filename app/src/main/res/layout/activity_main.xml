@@ -1,23 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:layout_gravity="center_vertical"
+        android:gravity="center_vertical"
+        android:layout_weight="0.7"
+        android:background="@color/greyActionBarBackground"
         tools:context=".MainActivity">
+    <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:src="@drawable/ic_baseline_person_pin_24"
+            app:tint="@color/greenActionBarText">
+    </ImageView>
     <Spinner
             android:gravity="center_vertical"
             android:id="@+id/spinner"
+            android:spinnerMode="dialog"
+            android:padding="10dp"
+            android:background="#FFFFFF"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
     <Button
+            android:padding="20dp"
             android:text="@string/cat_pick"
+            android:textSize="16dp"
+            android:textAlignment="center"
             android:onClick="selectCategory"
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
-            android:gravity="center_vertical">
+            android:gravity="center_vertical" tools:ignore="RtlCompat">
     </Button>
 
 </LinearLayout>
